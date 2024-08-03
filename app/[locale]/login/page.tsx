@@ -92,7 +92,7 @@ export default async function Login({
 
   const signUp = async (formData: FormData) => {
     "use server"
-
+    /*
     const email = formData.get("email") as string
     const password = formData.get("password") as string
 
@@ -140,6 +140,8 @@ export default async function Login({
 
     // USE IF YOU WANT TO SEND EMAIL VERIFICATION, ALSO CHANGE TOML FILE
     // return redirect("/login?message=Check email to continue sign in process")
+    */
+    return redirect(`/login?message=Sorry, Sign up is disabled.`)
   }
 
   const handleResetPassword = async (formData: FormData) => {
@@ -192,14 +194,15 @@ export default async function Login({
         <SubmitButton className="mb-2 rounded-md bg-blue-700 px-4 py-2 text-white">
           Login
         </SubmitButton>
-
+{/* Disable SignUp Function */}
+{/*
         <SubmitButton
           formAction={signUp}
           className="border-foreground/20 mb-2 rounded-md border px-4 py-2"
         >
           Sign Up
         </SubmitButton>
-
+*/}
         <div className="text-muted-foreground mt-1 flex justify-center text-sm">
           <span className="mr-1">Forgot your password?</span>
           <button
